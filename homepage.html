@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      width: 100%;
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar-signout .signout-button {
+      padding: 0.5rem 1.2rem;
+      background-color: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .navbar-signout .signout-button:hover {
+      background-color: #e65c00;
+    }
+
+    @media (max-width: 600px) {
+      .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-signout {
+        margin-top: 0.5rem;
+      }
+
+      .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      background-image: url('/cuttingMachine.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 88vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem 2.5rem;
+      border-radius: 10px;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Product Section */
+    .products-container {
+      padding: 2rem;
+    }
+
+    .product {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      background-color: #f4f4f4;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 8px;
+      gap: 2rem;
+    }
+
+    .product-info {
+      flex: 1 1 72%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-info img {
+      width: 100%;
+      height: 60vh;
+      object-fit: contain;
+      border-radius: 8px;
+      background-color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .product-description {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    .product-description h3 {
+      margin: 0;
+    }
+
+    .coupon {
+      flex: 0 0 25%;
+      background-color: #fff3e0;
+      padding: 2rem;
+      border: 2px dashed #ff6600;
+      border-radius: 8px;
+      text-align: center;
+      align-self: center;
+    }
+
+    .coupon h2 {
+      color: #ff6600;
+      margin-bottom: 1rem;
+    }
+
+    .shop-button {
+      background-color: #ff6600;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .shop-button:hover {
+      background-color: #e65c00;
+    }
+
+    @media (max-width: 900px) {
+      .product {
+        flex-direction: column;
+      }
+
+      .coupon {
+        flex: 0 0 100%;
+        margin-top: 1.5rem;
+        align-self: stretch;
+      }
+
+      .product-info img {
+        height: 45vh;
+      }
+    }
+  </style>
+  <script type="module" src="./homepage.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">SMVM Wholesale</div>
+      <ul class="navbar-links">
+        <li><a href="https://codegit-ftq2.vercel.app/">Codegit</a></li>
+        <li><a href="finance.html">Electronics</a></li>
+      </ul>
+      <div class="navbar-signout">
+        <a href="index.html" class="signout-button">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h2>SMVM Wholesale</h2>
+      <h1>Innovation and Quality</h1>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="products-container">
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/IndustrailMachines.png" alt="Portable Plasma Machine" />
+        <div class="product-description">
+          <h3>Portable Plasma Machine</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>10% OFF</h2>
+        <p>Limited time offer on CNC Machine.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/CNCmachine.png" alt="CNC Machine" />
+        <div class="product-description">
+          <h3>CNC Machine</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>10% OFF</h2>
+        <p>Limited time offer on CNC Machine.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/excavators.png" alt="Mini Excavator" />
+        <div class="product-description">
+          <h3>1.2 Mini Excavator</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>12% OFF</h2>
+        <p>Limited time offer on Mini Excavator.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/wheelLoader.png" alt="Wheel Loader" />
+        <div class="product-description">
+          <h3>Wheel Loader</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>5% OFF</h2>
+        <p>Limited time offer on Wheel Loader.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/skidsteer.png" alt="Skid Steer" />
+        <div class="product-description">
+          <h3>Skid Steer</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>5% OFF</h2>
+        <p>Limited time offer on Skid Steer.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/tablesaw.png" alt="Table Saw" />
+        <div class="product-description">
+          <h3>Table Saw</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>12% OFF</h2>
+        <p>Limited time offer on Table Saw.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/welderPositioning.png" alt="Welder Positioning" />
+        <div class="product-description">
+          <h3>Welder Positioning</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>12% OFF</h2>
+        <p>Limited time offer on Welder Positioning.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/milling.png" alt="Milling Table" />
+        <div class="product-description">
+          <h3>Milling Table</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>12% OFF</h2>
+        <p>Limited time offer on Milling Table.</p>
+        <a href="https://wa.link/zn4yjr"><button class="shop-button">Shop now</button></a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+        

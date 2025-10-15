@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Hero */
+.hero {
+  background-image: url('/industrial/acerBackground.png');
+  background-size: cover;
+  background-position: center;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem 2.5rem;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Product Section */
+.products-container {
+  padding: 2rem;
+}
+
+.product {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  gap: 2rem;
+}
+
+.product-info {
+  flex: 1 1 72%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info img {
+  width: 100%;
+  height: 60vh;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.product-description h3 {
+  margin: 0;
+}
+
+.coupon {
+  flex: 0 0 25%;
+  background-color: #fff3e0;
+  padding: 2rem;
+  border: 2px dashed #ff6600;
+  border-radius: 8px;
+  text-align: center;
+  align-self: center;
+}
+
+.coupon h2 {
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.shop-button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Divider Line */
+.product-divider {
+  width: 90%;
+  margin: 0 auto 2rem auto;
+  height: 1px;
+  background: #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product {
+    flex-direction: column;
+  }
+
+  .coupon {
+    flex: 0 0 100%;
+    margin-top: 1.5rem;
+    align-self: stretch;
+  }
+
+  .product-info img {
+    height: 45vh;
+  }
+
+}
+
+
+    </style>
+    <script type="module" src="./homepage.js"></script>
+</head>
+<body>
+    <!-- <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo"></div>
+      <ul class="navbar-links">
+        <li><a href="https://codegit-ftq2.vercel.app/">Codegit</a></li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h2>SMVM Wholesale</h2>
+      <h1>Innovation and Quality</h1>
+      <!--
+      <a href="/industrial">
+        <button class="cta-button">Whole Sale</button>
+      </a>
+      -->
+    </div>
+  </div>
+
+  <!-- Products -->
+    <div class="products-container">
+    <!-- Repeat this block for each product -->
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/acer-9113i.png" alt="CNC Machine" />
+        <div class="product-description">
+          <h3>15.6" Acer laptop with windows 11</h3>
+          <h3>Condition: New</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>10% OFF</h2>
+        <p>Acer Laptop</p>
+        <a href="/contactUs.html">
+          <button class="shop-button">Contact Us</button>
+        </a>
+      </div>
+    </div>
+
+        <div class="product">
+      <div class="product-info">
+        <img src="/industrial/lenovo.png" alt="Portable plasma machine" />
+        <div class="product-description">
+          <h3>New 15.6" Lenovo laptop with windows 11</h3>
+          <h3>Condition: New</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>12% OFF</h2>
+        <p>Limited time offer on Iphone 15.</p>
+        <a href="/contactUs.html">
+          <button class="shop-button">Contact Us</button>
+        </a>
+      </div>
+    </div>
+
+  <div class="products-container">
+    <!-- Repeat this block for each product -->
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/phone162.png" alt="CNC Machine" />
+        <div class="product-description">
+          <h3>Iphone 16</h3>
+          <h3>Condition: Pre-owned, Like new</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>10% OFF</h2>
+        <p>Limited time offer on Iphone 16.</p>
+        <a href="/contactUs.html">
+          <button class="shop-button">Contact Us</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Repeat similar blocks for the rest of the products -->
+    <!-- Example: Portable plasma machine -->
+    <div class="product">
+      <div class="product-info">
+        <img src="/industrial/phone152.png" alt="Portable plasma machine" />
+        <div class="product-description">
+          <h3>Iphone 15</h3>
+          <h3>Condition: Pre-owned, Like new</h3>
+          <p>Top-tier industrial equipment designed for reliability and performance.</p>
+        </div>
+      </div>
+      <div class="coupon">
+        <h2>12% OFF</h2>
+        <p>Limited time offer on Iphone 15.</p>
+        <a href="/contactUs.html">
+          <button class="shop-button">Contact Us</button>
+        </a>
+      </div>
+    </div>
+     
+    <!-- Add remaining products following the same pattern -->
+  </div>
+</body>
+</html>
